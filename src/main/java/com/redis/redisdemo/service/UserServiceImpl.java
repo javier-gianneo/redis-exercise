@@ -12,8 +12,8 @@ public class UserServiceImpl implements UserService {
   @Autowired
   private UserRepository repository;
 
-  public User createUser(String name) {
-    User user = new User(name);
+  public User createUser(String id, String name) {
+    User user = new User(id, name);
     final User respons = repository.save(user);
     return respons;
   }

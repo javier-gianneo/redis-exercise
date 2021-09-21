@@ -25,8 +25,8 @@ public class UserController {
   }
 
   @PutMapping
-  public ResponseEntity<User> createUser(@RequestParam String name) {
-    User user = service.createUser(name);
+  public ResponseEntity<User> createUser(@RequestParam String id, @RequestParam String name) {
+    User user = service.createUser(id, name);
     return ResponseEntity.ok(user);
   }
 
